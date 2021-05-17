@@ -1,10 +1,6 @@
+# :white_check_mark: ML Projects
+
 Learn important concepts and ideas in data science by building projects.
-
-# Books that bring clarity
-- [Approaching (Almost) Any Machine Learning Problem](https://www.amazon.in/Approaching-Almost-Machine-Learning-Problem/dp/B08V5JWJMZ/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1621250069&sr=8-1)
-- [The elements of statistical learning](https://www.amazon.in/Elements-Statistical-Learning-Prediction-Statistics/dp/0387848576/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1621250127&sr=8-1)
-
-# ML Projects
 
 # Credit Fraud Detector
 
@@ -59,3 +55,8 @@ Synthetic Minority Over-sampling Technique (SMOTE) aims to create new minority c
 We examine how the model performs when tested on data that was unseen. So how do we measure the performance of the model? We use evaluation metrics for evaluating the performance of the model depending on the nature of the problem. Depending upon the amount of oversampling required, nearest neighbors of minority examples are randomly selected
 
 Confusion matrix is the most commonly used evaluation metrics in predictive analysis mainly because it is very easy to understand and it can be used to compute other essential metrics such as accuracy, recall, precision, etc.
+
+
+# Books that bring clarity
+- [Approaching (Almost) Any Machine Learning Problem](https://www.amazon.in/Approaching-Almost-Machine-Learning-Problem/dp/B08V5JWJMZ/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1621250069&sr=8-1)
+- [The elements of statistical learning](https://www.amazon.in/Elements-Statistical-Learning-Prediction-Statistics/dp/0387848576/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1621250127&sr=8-1)
