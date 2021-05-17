@@ -1,3 +1,9 @@
+Learn important concepts and ideas in data science by building projects.
+
+# Books that bring clarity
+- [Approaching (Almost) Any Machine Learning Problem](https://www.amazon.in/Approaching-Almost-Machine-Learning-Problem/dp/B08V5JWJMZ/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1621250069&sr=8-1)
+- [The elements of statistical learning](https://www.amazon.in/Elements-Statistical-Learning-Prediction-Statistics/dp/0387848576/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1621250127&sr=8-1)
+
 # ML Projects
 
 # Credit Fraud Detector
@@ -17,35 +23,39 @@ It contains only numerical input variables which are the result of a PCA transfo
 Refer: https://www.kaggle.com/mlg-ulb/creditcardfraud
 
 ### Challenges faced
-Most real-world applications possess unbalanced class distribution where the number of a class label heavily dominates the count of another class label. One of the best example to explain class imbalance problem is the fraud detection task, where the number of fraud class label is very low as compared to the normal class label. Most machine learning algorithms work poorly in the presence of unbalanced class distribution.So some questions may arise
+Most real-world applications possess unbalanced class distribution where the number of a class label heavily dominates the count of another class label. One of the best example to explain class imbalance problem is the fraud detection task, where the number of fraud class label is very low as compared to the normal class label. Most machine learning algorithms work poorly in the presence of unbalanced class distribution. So some questions may arise
 
 1. How to tackle the class imbalance problem?
 2. What evaluation metrics should be used to assess the performance of a predictive model?
 
-### Design
+### Overall Design
 
 The transactions are first checked at the terminal point to be valid or not, which is shown in figure below. At the terminal point, certain essential conditions such as sufficient balance, valid PIN (Personal Identification Number), etc. are validated and the transactions are filtered accordingly. All the valid transactions are then scored by the predictive model, which then classifies the transactions as genuine or fraudulent. The investigators investigate each fraudulent alert and provide feedback to the predictive model to improve the model’s performance.
 
 ![image](https://user-images.githubusercontent.com/43449556/118452328-aaa2f500-b713-11eb-9852-b1734dec993e.png)
 
-### Solution
+### Solution to challenges
 
 **Handle class imbalance in dataset**
 
+We can roughly classify the approaches into three categories: resampling approach, ensemble-based approach, and cost-sensitive learning approach. In the case of class imbalance problem, such data preprocessing is performed using a data level approach, which is called resampling approach.
+
+In the undersampling method, the majority class is reduced in order to make the dataset balanced.
+
+![image](https://user-images.githubusercontent.com/43449556/118476601-573ca100-b72b-11eb-8d87-6ef4af532a66.png)
+
+An oversampling method is exactly opposite to the undersampling method. This method works with the minority class. It replicates the observations from minority class to balance the ratio between majority and minority sample, as shown in the below diagram.
+
+![image](https://user-images.githubusercontent.com/43449556/118476828-a256b400-b72b-11eb-938c-259f416875ae.png)
+
+
+Synthetic Minority Over-sampling Technique (SMOTE) aims to create new minority class examples (synthetic instances) by interpolating between several nearest minority examples rather than by oversampling with replacement.
+
+![image](https://user-images.githubusercontent.com/43449556/118477171-08433b80-b72c-11eb-8686-3fc69e4f5de9.png)
 
 
 **Deciding evaluation matrix**
 
-We examine how the model performs when tested on data that was unseen. So how do we measure the performance of the model? We use evaluation metrics for evaluating the performance of the model depending on the nature of the problem.
+We examine how the model performs when tested on data that was unseen. So how do we measure the performance of the model? We use evaluation metrics for evaluating the performance of the model depending on the nature of the problem. Depending upon the amount of oversampling required, nearest neighbors of minority examples are randomly selected
 
 Confusion matrix is the most commonly used evaluation metrics in predictive analysis mainly because it is very easy to understand and it can be used to compute other essential metrics such as accuracy, recall, precision, etc.
-
-
-
-
-
-
-
-
-
-
