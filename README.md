@@ -57,6 +57,27 @@ We examine how the model performs when tested on data that was unseen. So how do
 Confusion matrix is the most commonly used evaluation metrics in predictive analysis mainly because it is very easy to understand and it can be used to compute other essential metrics such as accuracy, recall, precision, etc.
 
 
+
+# Steam web scraping
+
+Task is to scrape the details of top 5 “New & Trending” Game details from [Steam page](https://store.steampowered.com/games/).
+-	Understand how webscraping is done.
+
+
+
+For every game in top 5 "New and Trending" games get:
+- number of positive reviews
+- name of developers
+- publisher of the game
+- system requirements
+- 10 reviews for each game
+
+### Challenges faced
+
+On scraping the site using beautiful soup, many of the div tags were not found even though they could be seen via Chrome developer tools panel. Reason for the issue was steam being dynamically loaded website (uses javascript embedded in the HTML) would only render after the browser would run the scripts. 
+
+So to solve this particular problem, I used requests-html library in python which would return the rendered HTML page. This could furthur be fed to beautiful soup for scraping purposes.
+ 
 # Books that bring clarity
 - [Approaching (Almost) Any Machine Learning Problem](https://www.amazon.in/Approaching-Almost-Machine-Learning-Problem/dp/B08V5JWJMZ/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1621250069&sr=8-1)
 - [The elements of statistical learning](https://www.amazon.in/Elements-Statistical-Learning-Prediction-Statistics/dp/0387848576/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1621250127&sr=8-1)
